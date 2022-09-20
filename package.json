@@ -1,0 +1,28 @@
+{
+  "name": "team-profile-gen",
+  "version": "1.0.0",
+  "description": "![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Willyum863/team-profile-gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Willyum863/team-profile-gen/issues"
+  },
+  "homepage": "https://github.com/Willyum863/team-profile-gen#readme",
+  "dependencies": {
+    "inquirer": "^9.1.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}
