@@ -5,6 +5,8 @@
 ## Description
 This project uses node to create a employee team profile. From a manager point of view generating a webpage that displays the managers team basic info to have quick acsess to their e-mails and github profiles.
 
+## Video
+
 ## Installation
 inquirer
 
