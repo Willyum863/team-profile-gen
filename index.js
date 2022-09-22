@@ -42,8 +42,7 @@ function runApp() {
 
     }
 
-}
-
+// Manager
 function addManager() {
     inquirer.prompt ([
 
@@ -56,7 +55,7 @@ function addManager() {
           {
             type: "input",
             name: "managerId",
-            message: "What is the manager's employee ID number?"
+            message: "What is the manager's employee ID?"
           },
       
           {
@@ -79,3 +78,89 @@ function addManager() {
 
 }
 
+// Engineer
+function addEngineer() {
+    inquirer.prompt([
+      
+      {
+        type: "input",
+        name: "engineerName",
+        message: "What is the engineer's name?"
+      },
+
+      {
+        type: "input",
+        name: "engineerId",
+        message: "What is the engineer's employee ID?" 
+      },
+
+      {
+        type: "input",
+        name: "engineerEmail",
+        message: "What is the engineer's email?"
+      },
+
+      {
+        type: "input",
+        name: "engineerGithub",
+        message: "What is the engineer's GitHub username?"
+      }
+
+    ]).
+    then(answers => {
+      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+      teamArray.push(engineer);
+      mainPrompt();
+    });
+
+}
+
+  //Intern
+  function addIntern() {
+    inquirer.prompt([
+      
+      {
+        type: "input",
+        name: "internName",
+        message: "What is the intern's name?"
+      },
+
+      {
+        type: "input",
+        name: "internId",
+        message: "What is the intern's employee ID?" 
+      },
+
+      {
+        type: "input",
+        name: "internEmail",
+        message: "What is the intern's email?"
+      },
+
+      {
+        type: "input",
+        name: "internSchool",
+        message: "What school does the intern go to?"
+      }
+
+    ]).
+    then(answers => {
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+      teamArray.push(intern);
+      mainPrompt();
+    });
+
+  }
+
+  function htmlBuilder () {
+    console.log("Team Profile Generated")
+
+    fs.writeFileSync(generateHTML(teamMembers), "UTF-8")
+
+}
+
+mainPrompt();
+
+}
+
+runApp();
