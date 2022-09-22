@@ -1,6 +1,6 @@
 const Engineer = require('../lib/Engineer');
  
-test('creates an Engineer object', () => {
+test('creates an Engineer', () => {
     const engineerTest = new Engineer("Will", "will.combee@yahoo.com", "2", "Willyum863");
     
     expect(engineerTest.github).toEqual(expect.any(String));
